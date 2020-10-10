@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#191919"
+    android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -37,7 +37,7 @@
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:orientation="horizontal"
-    android:background="#191919"
+    android:background="#FFFFFF"
     android:layout_marginTop="40dp"
     app:layout_goneMarginTop="10dp"
     app:layout_constraintEnd_toEndOf="parent"
@@ -48,7 +48,7 @@
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="#191919"
+    android:background="#FFFFFF"
     android:layout_marginTop="10dp"
     android:id="@+id/storyrecycle"/>
 
@@ -58,6 +58,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/postrecycle"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

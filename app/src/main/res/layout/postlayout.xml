@@ -3,11 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="460dp"
         app:cardBackgroundColor="#040404"
         app:cardCornerRadius="30dp">
 
@@ -40,20 +41,21 @@
             android:textColor="#ffffff" />
 
         <androidx.cardview.widget.CardView
-            android:layout_width="82dp"
-            android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="340dp"
+            android:layout_width="76dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="400dp"
             app:cardBackgroundColor="#F82F2F"
             app:cardCornerRadius="30dp"
-            app:cardElevation="10dp">
+            android:outlineSpotShadowColor="#FFFFFF"
+            app:cardElevation="30dp">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="7dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="10dp"
                 android:elevation="10dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="6dp"
                 android:src="@drawable/ic_heart" />
 
             <TextView
@@ -63,30 +65,38 @@
                 android:layout_marginTop="6dp"
                 android:text="145"
                 android:textColor="#ffffff"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/chat"
-            android:layout_marginTop="345dp"
-            android:layout_marginLeft="130dp"
+            android:layout_marginTop="405dp"
+            android:layout_marginLeft="120dp"
             android:elevation="10dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="165dp"
-            android:layout_marginTop="345dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="405dp"
             android:text="15"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_baseline_send_24"
+            android:layout_marginTop="405dp"
+            android:layout_marginLeft="190dp"
+            android:elevation="10dp"/>
+
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_baseline_send_24"
-            android:layout_marginTop="345dp"
-            android:layout_marginLeft="200dp"
+            android:src="@drawable/ic_baseline_bookmark_24"
+            android:layout_marginTop="405dp"
+            android:layout_marginLeft="350dp"
             android:elevation="10dp"/>
 
 

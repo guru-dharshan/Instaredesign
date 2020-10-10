@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 
@@ -37,7 +39,7 @@ import java.util.List;
         @Override
         public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
             int id = context.getResources().getIdentifier(postlist.get(position), "drawable", context.getPackageName());
-            holder.imgThumbnail.setImageResource(id);
+            Glide.with(context).load(id).centerCrop().into(holder.imgThumbnail);
         }
 
 
