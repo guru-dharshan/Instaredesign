@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
         storyrecycle.setLayoutManager(horizontalLayoutManagaer);
 
-        postadapter postadapter = new postadapter(MainActivity.this, postlist);
+        RecyclerAdapter postadapter = new RecyclerAdapter(postlist,MainActivity.this);
         postrecycle.setAdapter(postadapter);
         LinearLayoutManager ver
                 = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);
