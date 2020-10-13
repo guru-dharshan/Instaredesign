@@ -17,11 +17,13 @@ import java.util.List;
 
  class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>{
     List<String> posts=new ArrayList<>();
+    List<Integer> likeposts=new ArrayList<>();
     Context context;
 
-    public RecyclerAdapter(List<String> posts, Context context) {
+    public RecyclerAdapter(List<String> posts, Context context,List<Integer> likeposts) {
         this.posts = posts;
         this.context = context;
+        this.likeposts=likeposts;
     }
 
     @NonNull
@@ -37,7 +39,8 @@ import java.util.List;
         //holder.postsimages.setImageResource(posts.get(position));
         int id = context.getResources().getIdentifier(posts.get(position), "drawable", context.getPackageName());
         Glide.with(context).load(id).centerCrop().into(holder.postsimages);
-        holder.likedphoto.setImageResource(R.drawable.groupdark);
+        //holder.likedphoto.setImageResource(R.drawable.groupdark);
+        Glide.with(context).load(likeposts.get(0)).into(holder.likedphoto);
     }
 
     @Override

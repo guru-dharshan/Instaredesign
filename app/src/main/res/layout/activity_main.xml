@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#FFFFFF"
+    android:background="?attr/backgroundcolor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -12,6 +12,7 @@
     android:layout_height="40dp"
     app:layout_constraintEnd_toEndOf="parent"
     android:elevation="0dp"
+    app:cardBackgroundColor="?attr/cardbackground"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 <ImageView
@@ -19,37 +20,86 @@
     android:layout_height="30dp"
     android:layout_marginLeft="20dp"
     android:layout_marginTop="5dp"
+    android:id="@+id/modess"
     android:src="@drawable/ic_icons8_settings"/>
     <ImageView
         android:layout_width="120dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="150dp"
+        android:layout_gravity="center"
         android:src="@drawable/ic_instagram_2"
-        android:layout_marginTop="7dp"/>
+        android:layout_marginTop="5dp"/>
     <ImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:src="@drawable/ic_mail"
-        android:layout_marginLeft="360dp"
+       android:layout_gravity="right"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="-2dp"/>
 </androidx.cardview.widget.CardView>
 <androidx.appcompat.widget.LinearLayoutCompat
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:orientation="horizontal"
-    android:background="#FFFFFF"
+    android:background="?attr/backgroundcolor"
     android:layout_marginTop="40dp"
     app:layout_goneMarginTop="10dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:cardCornerRadius="20dp"
+        android:id="@+id/dialogg"
+        android:visibility="gone"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Switch
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:layout_width="80dp"
+                android:text="Dark Mode"
+                android:layout_height="40dp"
+                android:id="@+id/aswitch"
+                android:buttonTint="?attr/tintcolor"
+                >
+            </Switch>
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/view1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="mode 1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp">
+                </RadioButton>
 
+                <RadioButton
+                    android:id="@+id/view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="mode 2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp">
+                </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 <androidx.recyclerview.widget.RecyclerView
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="#FFFFFF"
-    android:layout_marginTop="5dp"
+    android:background="?attr/recyclecolor"
     android:id="@+id/storyrecycle"/>
 
 
@@ -57,6 +107,7 @@
 </androidx.appcompat.widget.LinearLayoutCompat>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
+        android:background="?attr/recyclecolor"
         android:layout_height="match_parent"
         android:layout_marginTop="150dp"
         android:layout_marginLeft="10dp"
@@ -69,7 +120,7 @@
         android:layout_width="match_parent"
         android:layout_marginBottom="-10dp"
         android:layout_height="70dp"
-        app:cardBackgroundColor="#222222"
+        app:cardBackgroundColor="?attr/bottombar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
